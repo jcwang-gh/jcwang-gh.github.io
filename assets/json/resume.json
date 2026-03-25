@@ -1,0 +1,155 @@
+{
+  "basics": {
+    "name": "Jianchao Wang",
+    "label": "Master Student",
+    "image": "",
+    "email": "jcwang.goog@gmail.com",
+    "url": "https://jcwang-gh.github.io/",
+    "summary": "I'm currently a master student of NUAA, and I'm applying for Research Assistant.",
+    "location": {
+      "address": "#29 Jiangjun Road, Jiangning District",
+      "postalCode": "211106",
+      "city": "Nanjing",
+      "countryCode": "CN",
+      "region": "Jiangsu"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "jcwang-gh",
+        "url": "https://github.com/jcwang-gh"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Nanjing University of Aeronautics and Astronautics, Nanjing, China",
+      "location": "Nanjing, China",
+      "url": "https://www.nuaa.edu.cn",
+      "area": "Computer Science and Technology",
+      "studyType": "Master",
+      "startDate": "2023-09-01",
+      "endDate": "2026-04-01",
+      "score": "4.4"
+    },
+    {
+      "institution": "Nanjing University of Aeronautics and Astronautics, Nanjing, China",
+      "location": "Nanjing, China",
+      "url": "https://www.nuaa.edu.cn",
+      "area": "Software Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2019-09-01",
+      "endDate": "2023-06-01",
+      "score": "4.0"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Open Source Contribution Award",
+      "date": "2025-11",
+      "awarder": "Nanjing University of Aeronautics and Astronautics & the OpenAtom Foundation",
+      "url": "https://cs.nuaa.edu.cn/2025/1124/c10850a388477/page.htm",
+      "summary": "I am honored with the Open Source Contribution Award."
+    },
+    {
+      "title": "Best Paper Honorable Mention",
+      "date": "2025-10",
+      "awarder": "The 24th International Conference on Cyberworlds Committee",
+      "url": "https://cw2025.tyut.edu.cn/awards.html",
+      "summary": "My paper 'Low-Frequency First: Eliminating Floating Artifacts in 3D Gaussian Splatting' recieved the best paper honorable Mention in CW2025."
+    },
+    {
+      "title": "First-Class Academic Scholarship",
+      "date": "2023-09",
+      "awarder": "Nanjing University of Aeronautics and Astronautics Graduate School",
+      "url": "https://cs.nuaa.edu.cn/2023/1103/c10851a323709/page.htm",
+      "summary": "First-Class Academic Scholarship for Master's Degree Students."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "CET-6:583",
+      "date": "2020-09"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Low-Frequency First: Eliminating Floating Artifacts in 3D Gaussian Splatting",
+      "publisher": "24th International Conference on Cyberworlds",
+      "releaseDate": "2025.08.11",
+      "url": "https://jcwang-gh.github.io/EFA-GS",
+      "summary": "We propose Eliminating-Floating-Artifacts Gaussian Splatting (EFA-GS), which selectively expands under-optimized Gaussians to prioritize accurate low-frequency learning."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "Master",
+      "keywords": [
+        "C++",
+        "Python",
+        "Linux",
+        "Git",
+        "..."
+      ]
+    },
+    {
+      "name": "Traditional Machine Learning",
+      "level": "Master",
+      "keywords": [
+        "Logistic Regression",
+        "Naive Bayes",
+        "Support Vector Machine",
+        "Hidden Markov Model",
+        "..."
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker",
+      "icon": ""
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Spatial Intelligence",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "3D Gaussian Splatting",
+        "Neural Radiance Field",
+        "VGGT",
+        "Feed-Forward Optimization",
+        "Physics 3D",
+        "CAD Generation"
+      ]
+    },
+    {
+      "name": "AI-Generated Content",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Diffusion Models",
+        "Flow Matching",
+        "Stable Diffusion",
+        "Score-based Models",
+        "Score Distillation Sampling"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Unofficial Implementation of Classifier-free Diffusion Guidance",
+      "summary": "A simple unofficial implementation of classifier-free diffusion guidance.",
+      "highlights": ["Diffusion Models", "Classifier-free Diffusion Guidance"],
+      "startDate": "2023-01-16",
+      "endDate": "2023-03-13",
+      "url": "https://github.com/jcwang-gh/classifier-free-diffusion-guidance-Pytorch"
+    }
+  ]
+}

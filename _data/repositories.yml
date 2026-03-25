@@ -1,0 +1,9 @@
+github_users:
+  - jcwang-gh
+
+repo_description_lines_max: 2
+
+github_repos:
+  - jcwang-gh/classifier-free-diffusion-guidance-Pytorch
+  - jcwang-gh/vscode-server-download-script
+  - jcwang-gh/EFA-GS
