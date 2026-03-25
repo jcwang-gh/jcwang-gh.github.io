@@ -29,9 +29,9 @@ I received my B.Eng. in Software Engineering from NUAA in 2023.
 
 🚀 **Open to Opportunities:**
 
-* **Full-time Research Assistant positions** (available from Apr 2026, 6+ months)
-* **Collaborative projects** on 3D vision/generation with publication potential
-* **Pre-doc or visiting researcher roles** leading to PhD applications
+- **Full-time Research Assistant positions** (available from Apr 2026, 6+ months)
+- **Collaborative projects** on 3D vision/generation with publication potential
+- **Pre-doc or visiting researcher roles** leading to PhD applications
 
 If you are working on related topics and looking for a motivated researcher with
 hands-on experience in PyTorch, multi-GPU training, and open-source development,
