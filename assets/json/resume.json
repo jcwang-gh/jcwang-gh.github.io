@@ -85,24 +85,12 @@
     {
       "name": "Programming",
       "level": "Master",
-      "keywords": [
-        "C++",
-        "Python",
-        "Linux",
-        "Git",
-        "..."
-      ]
+      "keywords": ["C++", "Python", "Linux", "Git", "..."]
     },
     {
       "name": "Traditional Machine Learning",
       "level": "Master",
-      "keywords": [
-        "Logistic Regression",
-        "Naive Bayes",
-        "Support Vector Machine",
-        "Hidden Markov Model",
-        "..."
-      ]
+      "keywords": ["Logistic Regression", "Naive Bayes", "Support Vector Machine", "Hidden Markov Model", "..."]
     }
   ],
   "languages": [
@@ -121,25 +109,12 @@
     {
       "name": "Spatial Intelligence",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "3D Gaussian Splatting",
-        "Neural Radiance Field",
-        "VGGT",
-        "Feed-Forward Optimization",
-        "Physics 3D",
-        "CAD Generation"
-      ]
+      "keywords": ["3D Gaussian Splatting", "Neural Radiance Field", "VGGT", "Feed-Forward Optimization", "Physics 3D", "CAD Generation"]
     },
     {
       "name": "AI-Generated Content",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Diffusion Models",
-        "Flow Matching",
-        "Stable Diffusion",
-        "Score-based Models",
-        "Score Distillation Sampling"
-      ]
+      "keywords": ["Diffusion Models", "Flow Matching", "Stable Diffusion", "Score-based Models", "Score Distillation Sampling"]
     }
   ],
   "projects": [
