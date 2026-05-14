@@ -5,9 +5,6 @@ nav: true
 nav_order: 6
 dropdown: true
 children:
-  - title: RA
-    permalink: /#ra-application
-  - title: divider
   - title: 📄 CV (English)
     permalink: /assets/pdf/English_CV.pdf
   - title: 📄 简历（中文）
