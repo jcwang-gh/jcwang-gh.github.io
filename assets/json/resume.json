@@ -1,17 +1,17 @@
 {
   "basics": {
     "name": "Jianchao Wang",
-    "label": "Master Student",
+    "label": "Visitor",
     "image": "",
     "email": "jcwang.goog@gmail.com",
     "url": "https://jcwang-gh.github.io/",
-    "summary": "I'm currently a master student of NUAA, and I'm applying for Research Assistant.",
+    "summary": "I'm currently a visitor at Westlake University, and I'm applying for Ph.D.",
     "location": {
-      "address": "#29 Jiangjun Road, Jiangning District",
+      "address": "#600 Dunyu Road, Xihu District",
       "postalCode": "211106",
-      "city": "Nanjing",
+      "city": "Hangzhou",
       "countryCode": "CN",
-      "region": "Jiangsu"
+      "region": "Zhejiang"
     },
     "profiles": [
       {
