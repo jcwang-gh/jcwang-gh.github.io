@@ -20,7 +20,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-I am currently a Visitor at the School of Engineering, Westlake University, China, advised by Prof. Yuliang Xiu.
+I am currently a Research Assistant (Visitor) at the School of Engineering, Westlake University, China, advised by Prof. Yuliang Xiu.
 I received my B.Eng. in Software Engineering from NUAA in 2023, and M.Eng. in Computer Science and Technology from NUAA in 2026.
 
 🔍 Research Interests: Spatial Intelligence, World Model, 3D Gaussian Splatting, Feed-forward Reconstruction, Animatable Reconstruction/Generation, etc.
