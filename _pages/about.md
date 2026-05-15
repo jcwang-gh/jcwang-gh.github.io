@@ -20,16 +20,17 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-I am currently a Visiting Researcher at the School of Engineering, Westlake University, China, advised by Prof. Yuliang Xiu.
+I am currently a Visitor at the School of Engineering, Westlake University, China, advised by Prof. Yuliang Xiu.
 I received my B.Eng. in Software Engineering from NUAA in 2023, and M.Eng. in Computer Science and Technology from NUAA in 2026.
 
 🔍 Research Interests: Spatial Intelligence, World Model, 3D Gaussian Splatting, Feed-forward Reconstruction, Animatable Reconstruction/Generation, etc.
 
 🚀 **Open to Opportunities:**
 
-- **Collaborative projects** on 3D vision/generation with publication potential
-- **Pre-doc or visiting researcher roles** leading to PhD applications
+- **Academic collaborations** on 3D vision/generation, especially projects with publication potential
+- **PhD opportunities** in related areas, particularly positions aligned with my research interests
 
-If you are working on related topics and looking for a motivated researcher with
-hands-on experience in PyTorch, multi-GPU training, and open-source development,
+If you are interested in research collaboration or recruiting PhD students in related areas,
+and are looking for someone with hands-on experience in PyTorch, multi-GPU training,
+and open-source development,
 please feel free to reach out: <a href="mailto:jcwang.goog@gmail.com" style="white-space: nowrap">jcwang.goog@gmail.com</a>.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Opportunities
+title: More Info
 nav: true
 nav_order: 6
 dropdown: true
