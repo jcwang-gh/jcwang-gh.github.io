@@ -28,9 +28,9 @@ I received my B.Eng. in Software Engineering from NUAA in 2023, and M.Eng. in Co
 🚀 **Open to Opportunities:**
 
 - **Academic collaborations** on 3D vision/generation, especially projects with publication potential
-- **PhD opportunities** in related areas, particularly positions aligned with my research interests
+- **Ph.D. opportunities** in related areas, particularly positions aligned with my research interests
 
-If you are interested in research collaboration or recruiting PhD students in related areas,
+If you are interested in research collaboration or recruiting Ph.D. students in related areas,
 and are looking for someone with hands-on experience in PyTorch, multi-GPU training,
 and open-source development,
 please feel free to reach out: <a href="mailto:jcwang.goog@gmail.com" style="white-space: nowrap">jcwang.goog@gmail.com</a>.
