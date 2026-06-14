@@ -5,7 +5,7 @@ permalink: /
 subtitle: <a href='https://engineering.westlake.edu.cn/'>School of Engineering, Westlake University</a>.
 profile:
   align: right
-  image: wjc.jpg
+  image: wjc.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p><a href="mailto:jcwang.goog@gmail.com" style="white-space: nowrap">jcwang.goog@gmail.com</a></p>
