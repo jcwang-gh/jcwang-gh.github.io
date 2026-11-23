@@ -1,0 +1,80 @@
+<div class="try-on-cases" id="direct-editing-example">
+  <nav class="case-index" aria-label="Video editing examples">
+    {% assign groups = page.cases | group_by: 'group' %}
+    {% for group in groups %}
+      <div class="case-group">
+        <span class="case-group-label">{{ group.name }}</span>
+        <div class="case-links">
+          {% for study in group.items %}
+            <a id="choose-{{ study.id }}" href="#{{ study.id }}" data-case-link aria-label="{{ group.name }}, {{ study.label }}">{{ study.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </nav>
+  {% for study in page.cases %}
+    {% assign media = study.path | relative_url %}
+    <section class="case-study" id="{{ study.id }}" aria-labelledby="{{ study.id }}-title">
+      <div
+        class="case-note"
+        {% if study.legacy_id %}
+          id="{{ study.legacy_id }}"
+        {% endif %}
+      >
+        <h3 id="{{ study.id }}-title">{{ study.heading }}</h3>
+        <p>{{ study.note }}</p>
+        {% if study.swatch %}
+          <figure class="case-swatch">
+            <img
+              src="{{ media }}garment.webp"
+              width="{{ study.swatch.width }}"
+              height="{{ study.swatch.height }}"
+              alt="{{ study.swatch.alt | escape }}"
+              loading="lazy"
+            >
+            <figcaption>{{ study.swatch.label }}</figcaption>
+          </figure>
+        {% endif %}
+        {% if study.duration %}
+          <a class="case-clip" href="{{ media }}comparison.mp4"><span aria-hidden="true">▷</span> Watch clip ({{ study.duration }} s)</a>
+        {% endif %}
+        {% if study.garment_source %}
+          <a class="case-credit" href="{{ study.garment_source }}">Garment photo from the ViViD dataset</a>
+        {% endif %}
+      </div>
+      <div class="case-visual">
+        <div class="case-pair">
+          {% for image in study.inputs %}
+            <figure>
+              <div class="case-picture">
+                <img
+                  src="{{ media }}{{ image.file }}.webp"
+                  alt="{{ image.alt | escape }}"
+                  width="{{ image.width | default: 384 }}"
+                  height="{{ image.height | default: 512 }}"
+                  loading="lazy"
+                >
+              </div>
+              <figcaption>{{ image.label }}</figcaption>
+            </figure>
+          {% endfor %}
+        </div>
+        {% if study.earlier %}
+          <details class="case-earlier">
+            <summary>Source and earlier output</summary>
+            <div class="case-pair">
+              {% for image in study.earlier %}
+                <figure>
+                  <div class="case-picture">
+                    <img src="{{ media }}{{ image.file }}.webp" alt="{{ image.alt | escape }}" width="384" height="512" loading="lazy">
+                  </div>
+                  <figcaption>{{ image.label }}</figcaption>
+                </figure>
+              {% endfor %}
+            </div>
+          </details>
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

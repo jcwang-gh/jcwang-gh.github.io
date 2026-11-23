@@ -1,0 +1,17 @@
+{% assign date_label = include.label | strip %}
+{% assign location = include.location | strip %}
+{% if include.start_date and include.start_date != '' %}
+  {% assign start_month = include.start_date | split: '-' | slice: 0, 2 | join: '.' %}
+  {% assign end_month = include.end_date | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+  {% assign date_label = start_month | append: ' - ' | append: end_month %}
+{% endif %}
+{% if date_label != '' or location != '' %}
+  <div class="cv-entry-date">
+    {% if date_label != '' %}
+      <span class="badge font-weight-bold text-uppercase">{{ date_label | escape }}</span>
+    {% endif %}
+    {% if location != '' %}
+      <p class="location"><i class="fa-solid fa-location-dot iconlocation" aria-hidden="true"></i> {{ location | escape }}</p>
+    {% endif %}
+  </div>
+{% endif %}

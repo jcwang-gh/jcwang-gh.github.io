@@ -141,8 +141,35 @@
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% assign metrics = site.data.publication_metrics[entry.key] %}
     <div class="periodical">
       {{ periodical | strip }}
+      {% if metrics %}
+        <span class="publication-metrics">
+          {% if site.enable_publication_badges.google_scholar and metrics.google_scholar %}
+            {% assign scholar_author = metrics.google_scholar.id | split: ':' | first %}
+            <span class="publication-metric">
+              <a
+                href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user={{ scholar_author }}&amp;citation_for_view={{ metrics.google_scholar.id }}"
+                aria-label="View paper on Google Scholar"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://scholar.google.com/scholar?cites={{ metrics.google_scholar.cites }}&amp;hl=en"
+                aria-label="Google Scholar citation count, {{ metrics.google_scholar.count }}"
+              >
+                {{- metrics.google_scholar.count -}}
+              </a>
+            </span>
+          {% endif %}
+          {% if site.enable_publication_badges.github_stars and metrics.github %}
+            <a class="publication-metric" href="https://github.com/{{ metrics.github.id }}/stargazers">
+              <i class="fa-regular fa-star" role="img" aria-label="GitHub stars"></i>
+              <span data-github-stars="{{ metrics.github.id | escape }}">{{ metrics.github.count }}</span>
+            </a>
+          {% endif %}
+        </span>
+      {% endif %}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
@@ -229,7 +256,7 @@
       {% endif %}
 
       {% assign entry_has_google_scholar_badge = false %}
-      {% if entry.google_scholar_id %}
+      {% if entry.google_scholar_id and metrics.google_scholar == null %}
         {% assign entry_has_google_scholar_badge = true %}
       {% endif %}
 

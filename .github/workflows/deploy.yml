@@ -9,6 +9,8 @@ on:
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
+      - "bin/refresh_publication_metrics.py"
+      - "requirements.txt"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -38,6 +40,8 @@ on:
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
+      - "bin/refresh_publication_metrics.py"
+      - "requirements.txt"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -59,7 +63,13 @@ on:
       - "!FAQ.md"
       - "!INSTALL.md"
       - "!README.md"
+  schedule:
+    - cron: "23 2 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: pages-${{ github.event.pull_request.number || 'production' }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -90,12 +100,17 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-      - name: Install and Build 🔧
+      - name: Install build dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
+          pip3 install --upgrade -r requirements.txt
+      - name: Refresh publication metrics
+        if: github.event_name != 'pull_request'
+        run: python3 bin/refresh_publication_metrics.py
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

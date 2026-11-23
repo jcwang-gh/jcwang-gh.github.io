@@ -193,15 +193,21 @@ ul.task-list input[type="checkbox"] {
 // Profile
 
 .profile {
-  width: 100%;
+  width: 35.5556%;
+  max-width: 320px;
+
+  figure {
+    margin: 0;
+  }
 
   .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    margin: 0.375rem 0 0.75rem;
+    font-size: 0.875rem;
+    text-align: center;
+    overflow-wrap: anywhere;
 
     p {
-      display: inline-block;
+      display: block;
       margin: 0;
     }
   }
@@ -215,15 +221,41 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
-@media (min-width: 576px) {
-  .profile {
-    width: 30%;
+.research-projects {
+  margin: 1.5rem 0;
 
-    .address {
-      p {
-        display: block;
-      }
+  .featured-project {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+
+    img {
+      width: 13rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.3rem;
     }
+
+    > div {
+      flex: 1 1 17rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .project-status {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -516,6 +548,7 @@ footer.sticky-bottom {
     .list-group-item {
       background-color: inherit;
       border-color: var(--global-divider-color);
+      padding-inline: 0.5rem;
 
       .badge {
         color: var(--global-card-bg-color) !important;
@@ -529,11 +562,6 @@ footer.sticky-bottom {
   background-color: transparent;
   border: none;
   color: var(--global-text-color);
-}
-
-.date-column {
-  width: 75px;
-  transform: translateX(-15px) translateY(-5px);
 }
 
 // Repositories
@@ -810,6 +838,36 @@ footer.sticky-bottom {
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
+        }
+      }
+
+      .publication-metrics {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-inline-start: 0.4rem;
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.4;
+        white-space: nowrap;
+
+        .publication-metric {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.22rem;
+        }
+
+        a {
+          color: var(--global-text-color);
+
+          &:hover,
+          &:focus-visible {
+            color: var(--global-theme-color);
+          }
+        }
+
+        i {
+          font-size: 0.8125rem;
         }
       }
 

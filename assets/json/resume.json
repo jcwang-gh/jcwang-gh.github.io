@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Jianchao Wang",
-    "label": "Research Assistant (Visitor)",
+    "label": "Visiting Research Assistant",
     "image": "",
     "email": "jcwang.goog@gmail.com",
     "url": "https://jcwang-gh.github.io/",
-    "summary": "I'm currently a Research Assistant (Visitor) at Westlake University, and I'm actively seeking for Ph.D. opportunities.",
+    "summary": "I work on 3D reconstruction and video generation at Westlake University and am seeking a Ph.D. position starting in 2027.",
     "location": {
       "address": "#600 Dunyu Road, Xihu District",
       "postalCode": "310030",
@@ -21,13 +21,25 @@
       }
     ]
   },
+  "work": [
+    {
+      "name": "School of Engineering, Westlake University",
+      "position": "Visiting Research Assistant",
+      "url": "https://engineering.westlake.edu.cn/",
+      "location": "Hangzhou, China",
+      "startDate": "2026-05",
+      "endDate": "2026-12",
+      "summary": "Prof. Yuliang Xiu is my advisor for this visiting research assistantship."
+    }
+  ],
   "education": [
     {
       "institution": "Nanjing University of Aeronautics and Astronautics, Nanjing, China",
       "location": "Nanjing, China",
       "url": "https://www.nuaa.edu.cn",
-      "area": "Computer Science and Technology",
-      "studyType": "Master",
+      "area": "Computer Science",
+      "studyType": "M.Eng.",
+      "advisor": "Prof. Jie Qin",
       "startDate": "2023-09-01",
       "endDate": "2026-04-01",
       "score": "4.4"
@@ -37,7 +49,7 @@
       "location": "Nanjing, China",
       "url": "https://www.nuaa.edu.cn",
       "area": "Software Engineering",
-      "studyType": "Bachelor",
+      "studyType": "B.Eng.",
       "startDate": "2019-09-01",
       "endDate": "2023-06-01",
       "score": "4.0"
@@ -56,7 +68,7 @@
       "date": "2025-10",
       "awarder": "The 24th International Conference on Cyberworlds Committee",
       "url": "https://cw2025.tyut.edu.cn/awards.html",
-      "summary": "My paper 'Low-Frequency First: Eliminating Floating Artifacts in 3D Gaussian Splatting' recieved the best paper honorable Mention in CW2025."
+      "summary": "Awarded for our paper on reducing floating artifacts in 3D Gaussian splatting."
     },
     {
       "title": "First-Class Academic Scholarship",
@@ -73,6 +85,13 @@
     }
   ],
   "publications": [
+    {
+      "name": "Frequency-aware optimization for floating artifact removal in 3D Gaussian splatting",
+      "publisher": "The Visual Computer, volume 42, article 344",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.1007/s00371-026-04531-w",
+      "summary": "Journal extension of our Cyberworlds 2025 paper."
+    },
     {
       "name": "Low-Frequency First: Eliminating Floating Artifacts in 3D Gaussian Splatting",
       "publisher": "24th International Conference on Cyberworlds",
@@ -106,18 +125,25 @@
     }
   ],
   "interests": [
-    {
-      "name": "Spatial Intelligence",
-      "icon": "fa-solid fa-tag",
-      "keywords": ["3D Gaussian Splatting", "Neural Radiance Field", "VGGT", "Feed-Forward Optimization", "Physics 3D", "CAD Generation"]
-    },
-    {
-      "name": "AI-Generated Content",
-      "icon": "fa-solid fa-tag",
-      "keywords": ["Diffusion Models", "Flow Matching", "Stable Diffusion", "Score-based Models", "Score Distillation Sampling"]
-    }
+    { "name": "Physical AI" },
+    { "name": "4D reconstruction" },
+    { "name": "Geometry foundation models" },
+    { "name": "World models" },
+    { "name": "Video generation models" }
   ],
   "projects": [
+    {
+      "name": "Video Virtual Try-On",
+      "summary": "Designed a two-stage video try-on pipeline at Westlake University and built the human animation prototype.",
+      "startDate": "2026-05",
+      "endDate": "2026-10",
+      "url": "https://jcwang-gh.github.io/projects/video-virtual-try-on/",
+      "highlights": [
+        "Reproduced OmniTryOn and ViViD and found cases where the original hemline or collar survived the edit. I designed the pipeline around a single dressed reference image so I could check the garment before animating the wearer.",
+        "Curated 3.2 hours of real footage from four fashion datasets and rendered about 10 hours of synchronized Mixamo pairs in Blender, with the same action performed by characters of different proportions.",
+        "Implemented separate appearance and motion inputs on Wan2.2. Following IM-Animation, I trained the motion retargeter for 40,000 steps on two GPUs, then fine-tuned the video generator for 20,000 steps on one GPU."
+      ]
+    },
     {
       "name": "Unofficial Implementation of Classifier-free Diffusion Guidance",
       "summary": "A simple unofficial implementation of classifier-free diffusion guidance.",

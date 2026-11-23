@@ -2,13 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://engineering.westlake.edu.cn/'>School of Engineering, Westlake University</a>.
+subtitle: Visiting Research Assistant · <a href='https://engineering.westlake.edu.cn/'>School of Engineering, Westlake University</a> · Advised by Prof. Yuliang Xiu
 profile:
   align: right
-  image: wjc.png
-  image_circular: false # crops the image to make it circular
+  image: wjc-2.png
+  image_alt: Jianchao Wang at his research workstation
+  image_circular: false
   more_info: >
-    <p><a href="mailto:jcwang.goog@gmail.com" style="white-space: nowrap">jcwang.goog@gmail.com</a></p>
     <p>Hangzhou, China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -16,21 +16,28 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  scrollable: false
+  limit: 3
 ---
 
-I am currently a Research Assistant (Visitor) at the School of Engineering, Westlake University, China, advised by Prof. Yuliang Xiu.
-I received my B.Eng. in Software Engineering from NUAA in 2023, and M.Eng. in Computer Science and Technology from NUAA in 2026.
+I’m looking for a **Ph.D. position starting in 2027**. My research interests include 4D reconstruction, geometry foundation models,
+video generation, world models, and physical AI.
 
-🔍 Research Interests: Spatial Intelligence, World Model, 3D Gaussian Splatting, Feed-forward Reconstruction, Animatable Reconstruction/Generation, etc.
+I earned my B.Eng. in Software Engineering at Nanjing University of Aeronautics and Astronautics in 2023.
+I stayed on for my M.Eng. in Computer Science (2026), supervised by Prof. Jie Qin. During my master’s, I developed EFA-GS to reduce
+floating artifacts in 3D Gaussian splatting. Our paper received a Best Paper Honorable Mention at Cyberworlds 2025.
 
-🚀 **Open to Opportunities:**
+- At Westlake, I developed **EPEA-BA**, a GPU solver for approximate bundle adjustment.
+  I traced how errors pass between camera estimates and 3D points. The elimination order sets the direction of that transfer, and the viewing geometry
+  determines which errors grow.
 
-- **Academic collaborations** on 3D vision/generation, especially projects with publication potential
-- **Ph.D. opportunities** in related areas, particularly positions aligned with my research interests
+  The solver updates the camera parameters first, then refines each 3D point across views using curvature-corrected Adam.
+  I tested it on 20 scenes from BAL and 1DSfM. On the largest BAL scene, it reached the target reprojection error in 4.92 seconds, compared with
+  6.35 seconds for Caspar. Our paper is under review, and we plan to post the preprint on arXiv and open-source the code soon.
 
-If you are interested in research collaboration or recruiting Ph.D. students in related areas,
-and are looking for someone with hands-on experience in PyTorch, multi-GPU training,
-and open-source development,
-please feel free to reach out: <a href="mailto:jcwang.goog@gmail.com" style="white-space: nowrap">jcwang.goog@gmail.com</a>.
+- For **Video Virtual Try-On**, I started by reproducing OmniTryOn and ViViD. In one ViViD clip, the original red collar was still visible above
+  the new white blouse as the wearer turned. I designed the pipeline to fit the garment in a still image first, then animate the wearer using motion from the original video.
+
+  I built the animation model on Wan2.2 and trained it in stages following IM-Animation. I curated 3.2 hours of footage from four fashion datasets
+  and used Blender to render about 10 hours of paired Mixamo clips. Each pair shows two characters with different proportions performing the same action.
+  [Project Page]({% link _projects/video-virtual-try-on.md %})

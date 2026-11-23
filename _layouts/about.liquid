@@ -25,10 +25,10 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+          {% assign profile_image_alt = page.profile.image_alt | default: site.first_name %}
+          {% capture sizes %}(min-width: 930px) 320px, calc(35.5556vw - 10.6667px){% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
             cache_bust=true
           %}
         {% endif %}
@@ -40,10 +40,41 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
+    {% if featured_projects.size > 0 %}
+      <section class="research-projects" aria-labelledby="research-projects-title">
+        <h2 id="research-projects-title"><a href="{{ '/projects/' | relative_url }}" style="color: inherit">Research projects</a></h2>
+        {% for project in featured_projects %}
+          <div class="featured-project">
+            {% if project.img %}
+              <img src="{{ project.img | relative_url }}" alt="{{ project.img_alt | escape }}" loading="lazy">
+            {% endif %}
+            <div>
+              <h3>
+                <a class="stretched-link" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+              </h3>
+              {% if project.status %}
+                <p class="project-status">{{ project.status }}</p>
+              {% endif %}
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent news</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -54,14 +85,6 @@ layout: default
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
       {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Social -->

@@ -1,0 +1,23 @@
+{% assign media_path = '/assets/video/virtual-try-on/' | append: include.file | relative_url %}
+<figure id="{{ include.file }}" class="try-on-film">
+  <div class="try-on-player">
+    <video
+      width="672"
+      height="328"
+      controls
+      loop
+      muted
+      playsinline
+      preload="{{ include.preload | default: 'none' }}"
+      poster="{{ media_path }}.webp"
+      aria-label="{{ include.title | escape }}. Reference image, driving video and generated animation, from left to right."
+      aria-describedby="{{ include.file }}-caption"
+    >
+      <source src="{{ media_path }}.mp4" type="video/mp4">
+      <a href="{{ media_path }}.mp4">Open the {{ include.title | escape }} video</a>
+    </video>
+  </div>
+  <figcaption id="{{ include.file }}-caption">
+    <strong>{{ include.title | escape }}</strong> {{ include.caption | escape }}
+  </figcaption>
+</figure>
