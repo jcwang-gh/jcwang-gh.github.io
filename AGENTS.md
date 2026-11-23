@@ -11,6 +11,7 @@ This academic site uses Jekyll and al-folio. The homepage is `_pages/about.md`. 
 - Run `git lfs install --local` and `git lfs pull` after cloning. Workflows that build the site from source need `lfs: true` on the checkout step.
 - Put display-ready images and videos under `assets/img/` and `assets/video/`. Keep source archives and unedited recordings outside the published site.
 - `.gitattributes` defines the LFS file types. Stage matching files with `git add` as usual. When adding an LFS rule for existing files, use `git add --renormalize -- <paths>` to update their staged representation. Check the result with `git lfs ls-files`.
+- Preview cache cleanup with `git lfs prune --dry-run --verify-remote --verify-unreachable --when-unverified=continue`. To delete the verified copies, rerun without `--dry-run`. Run `git gc` to pack ordinary Git objects.
 
 ## Build, Test, and Development Commands
 

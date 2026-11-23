@@ -35,11 +35,11 @@ jobs:
           curl https://raw.githubusercontent.com/george-gca/github-markdown-toc/main/gh-md-toc -o gh-md-toc
           chmod a+x gh-md-toc
           for file in ${ALL_CHANGED_FILES}; do
-            # Check if the file is a markdown file
-            if [[ "$file" != *.md ]]; then
+            # Only documents with a TOC marker use the generator.
+            if [[ "$file" != *.md ]] || ! grep -Fq '<!--ts-->' "$file"; then
               continue
             fi
-            ./gh-md-toc --indent 2 --insert --no-backup --hide-footer $file
+            ./gh-md-toc --indent 2 --insert --no-backup --hide-footer "$file"
           done
           rm gh-md-toc
 
