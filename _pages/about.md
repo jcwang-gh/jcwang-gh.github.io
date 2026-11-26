@@ -27,14 +27,15 @@ I earned my B.Eng. in Software Engineering at Nanjing University of Aeronautics 
 I stayed on for my M.Eng. in Computer Science (2026), supervised by Prof. Jie Qin. During my master’s, I developed EFA-GS to reduce
 floating artifacts in 3D Gaussian splatting. Our paper received a Best Paper Honorable Mention at Cyberworlds 2025.
 
-- At Westlake, I developed **EPEA-BA**, a GPU solver for approximate bundle adjustment.
-  I traced how errors pass between camera estimates and 3D points. The elimination order sets the direction of that transfer, and the viewing geometry
-  determines which errors grow.
+- At Westlake, I initiated **EPEA-BA** to study how approximation errors propagate between cameras and 3D points in bundle adjustment.
+  I derived error-transfer equations for both elimination orders and analyzed how viewing geometry can amplify small camera rotation errors into
+  large compensating displacements of distant 3D points.
 
-  The solver updates the camera parameters first, then refines each 3D point across views using curvature-corrected Adam.
-  I tested it on 20 scenes from BAL and 1DSfM. On the largest BAL scene, it reached the target reprojection error in 4.92 seconds, compared with
-  6.35 seconds for Caspar. Our paper is under review, and we plan to post the preprint on arXiv and open-source the code soon.
-  [Project Page]({% link _projects/epea-ba.md %})
+  I used this analysis to develop a GPU solver that replaces the global linear solve with independent camera fits and curvature-corrected Adam
+  updates for 3D points. Under matched optimization budgets, EPEA-BA reached the target reprojection error on 16 of 20 scenes, compared with
+  14 for MegBA and 8 for Caspar. On the largest BAL scene, it reached the target in 4.92 seconds of optimization time.
+
+  Preprint and code in preparation. [Project Page]({% link _projects/epea-ba.md %})
 
 - For **Video Virtual Try-On**, I started by reproducing OmniTryOn and ViViD. In one ViViD clip, the original red collar was still visible above
   the new white blouse as the wearer turned. I designed the pipeline to fit the garment in a still image first, then animate the wearer using motion from the original video.
