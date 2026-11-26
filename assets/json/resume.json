@@ -102,14 +102,20 @@
   ],
   "skills": [
     {
-      "name": "Programming",
-      "level": "Master",
-      "keywords": ["C++", "Python", "Linux", "Git", "..."]
+      "name": "Geometric Vision",
+      "keywords": ["Bundle Adjustment", "3D Gaussian Splatting", "Multi-view Geometry"]
     },
     {
-      "name": "Traditional Machine Learning",
-      "level": "Master",
-      "keywords": ["Logistic Regression", "Naive Bayes", "Support Vector Machine", "Hidden Markov Model", "..."]
+      "name": "Generative Models",
+      "keywords": ["Diffusion Models", "Video Generation", "Human Animation"]
+    },
+    {
+      "name": "GPU Computing",
+      "keywords": ["CUDA", "PyTorch"]
+    },
+    {
+      "name": "Programming",
+      "keywords": ["C++", "Python", "Linux", "Git"]
     }
   ],
   "languages": [

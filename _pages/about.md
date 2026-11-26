@@ -20,8 +20,8 @@ announcements:
   limit: 3
 ---
 
-I’m looking for a **Ph.D. position starting in 2027**. My research interests include 4D reconstruction, geometry foundation models,
-video generation, world models, and physical AI.
+I’m looking for a **Ph.D. position starting in 2027**. My research focuses on 3D/4D reconstruction and geometry-aware video generation.
+I am particularly interested in extending geometric reasoning to world models and physical AI.
 
 I earned my B.Eng. in Software Engineering at Nanjing University of Aeronautics and Astronautics in 2023.
 I stayed on for my M.Eng. in Computer Science (2026), supervised by Prof. Jie Qin. During my master’s, I developed EFA-GS to reduce
