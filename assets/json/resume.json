@@ -133,6 +133,16 @@
   ],
   "projects": [
     {
+      "name": "Error propagation in bundle adjustment (EPEA-BA)",
+      "summary": "Developed a GPU solver for approximate bundle adjustment at Westlake University.",
+      "url": "https://jcwang-gh.github.io/projects/epea-ba/",
+      "highlights": [
+        "Traced how elimination order and viewing geometry govern error transfer and quantified local recovery on a fixed linearization.",
+        "Fit cameras independently and used residuals from all observing views and curvature-corrected Adam to update each 3D point.",
+        "Met the reprojection target on 16 of 20 scenes under matched budgets. On the largest BAL scene, time to target was 4.92 seconds."
+      ]
+    },
+    {
       "name": "Video Virtual Try-On",
       "summary": "Designed a two-stage video try-on pipeline at Westlake University and built the human animation prototype.",
       "startDate": "2026-05",
