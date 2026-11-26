@@ -51,7 +51,12 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-frequency-aware-optimization-for-floating-artifact-removal-in-3d-gaussian-splatting-is-accepted-by-the-visual-computer-tvc",
           title: 'Our paper “Frequency-Aware Optimization for Floating Artifact Removal in 3D Gaussian Splatting” is...',
           description: "",
-          section: "News",},{id: "projects-video-virtual-try-on",
+          section: "News",},{id: "projects-epea-ba",
+          title: 'EPEA-BA',
+          description: "Error propagation in bundle adjustment and a GPU solver based on independent camera fits and curvature-corrected point updates.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/epea-ba/";
+            },},{id: "projects-video-virtual-try-on",
           title: 'Video Virtual Try-On',
           description: "I built and trained the animation stage of a video try-on prototype. My model transfers motion from a driving video to the person in a dressed reference image.",
           section: "Projects",handler: () => {
