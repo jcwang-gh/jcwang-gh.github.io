@@ -34,6 +34,7 @@ floating artifacts in 3D Gaussian splatting. Our paper received a Best Paper Hon
   The solver updates the camera parameters first, then refines each 3D point across views using curvature-corrected Adam.
   I tested it on 20 scenes from BAL and 1DSfM. On the largest BAL scene, it reached the target reprojection error in 4.92 seconds, compared with
   6.35 seconds for Caspar. Our paper is under review, and we plan to post the preprint on arXiv and open-source the code soon.
+  [Project Page]({% link _projects/epea-ba.md %})
 
 - For **Video Virtual Try-On**, I started by reproducing OmniTryOn and ViViD. In one ViViD clip, the original red collar was still visible above
   the new white blouse as the wearer turned. I designed the pipeline to fit the garment in a still image first, then animate the wearer using motion from the original video.
