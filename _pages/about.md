@@ -26,6 +26,11 @@ I am particularly interested in extending geometric reasoning to world models an
 I earned my B.Eng. in Software Engineering at Nanjing University of Aeronautics and Astronautics in 2023.
 I stayed on for my M.Eng. in Computer Science (2026), supervised by Prof. Jie Qin. During my master’s, I developed EFA-GS to reduce
 floating artifacts in 3D Gaussian splatting. Our paper received a Best Paper Honorable Mention at Cyberworlds 2025.
+{% assign efa_gs_metrics = site.data.publication_metrics.wang2025lowfrequencyfirsteliminatingfloating -%}
+The paper has {{ efa_gs_metrics.google_scholar.count }} citations on Google Scholar,
+and the EFA-GS repository has {{ efa_gs_metrics.github.count }} GitHub stars.
+Parthsarthi Rawat’s DENSER built on EFA-GS and won the SoccerNet 2026 Novel View Synthesis Challenge.
+[Challenge results](https://arxiv.org/html/2607.07320v1#S4.SS4)
 
 - At Westlake, I initiated **EPEA-BA** to study how approximation errors propagate between cameras and 3D points in bundle adjustment.
   I derived error-transfer equations for both elimination orders and analyzed how viewing geometry can amplify small camera rotation errors into
